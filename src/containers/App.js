@@ -4,6 +4,7 @@ import style from './App.css';
 import Title from '../components/Title';
 import TodoList from '../components/TodoList';
 
+
 class App extends React.Component {
     constructor(props){
         super(props);
@@ -37,7 +38,7 @@ class App extends React.Component {
             <div className={style.TodoApp}>
                 <Title className={style.TodoTitle} todoCount={this.state.data.length}/>
                 <TodoList className={style.TodoList} data={this.state.data} remove={this.removeTodo.bind(this)}/>
-
+                
       
             </div>
         );

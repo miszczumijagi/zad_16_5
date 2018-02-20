@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './TodoList.css';
-import Todo from './Todo';
 
-class TodoList extends React.Component {
+
+/*class TodoList extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -20,6 +20,19 @@ class TodoList extends React.Component {
 		)
 	}			
 
+} */
+const TodoList=(props) => {
+	return(
+		<div className={style.TodoList}>
+				<ul>{props.data.map(item => (
+					<li key={item.id}>
+						{item.text}
+						<button className="removeButton" onClick={()=> props.remove(item.id)}> Delete</button>
+					</li>
+
+				))}</ul>
+			</div>
+	)
 }
 
 
